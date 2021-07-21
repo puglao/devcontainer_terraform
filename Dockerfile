@@ -33,6 +33,10 @@ RUN curl https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_am
 RUN unzip terraform.zip -d /usr/bin/
 RUN chmod +x /usr/bin/terraform
 
+# Install Terragrunt 0.31.1
+RUN curl -L https://github.com/gruntwork-io/terragrunt/releases/download/v0.31.1/terragrunt_linux_amd64 -o /usr/bin/terragrunt
+RUN chmod +x /usr/bin/terragrunt
+
 # Install aws-cli
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 RUN unzip awscliv2.zip
