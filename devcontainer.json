@@ -1,11 +1,10 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.183.0/containers/docker-in-docker
 {
-	"name": "Docker in Docker",
+	"name": "Terragrunt",
 	"dockerFile": "Dockerfile",
-	"runArgs": ["--init", "--privileged"],
+	"runArgs": ["--init"],
 	"mounts": [
-		"source=dind-var-lib-docker,target=/var/lib/docker,type=volume",
 		"source=${localEnv:HOME}/.aws,target=/home/vscode/.aws,type=bind,readonly"
 	],
 	"overrideCommand": false,
@@ -16,7 +15,6 @@
 	"extensions": [
 		"ms-azuretools.vscode-docker",
 		"hashicorp.terraform",
-
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
